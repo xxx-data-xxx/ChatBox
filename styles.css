@@ -1,0 +1,130 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+}
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative;
+}
+.post {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: relative;
+}
+.post:hover .reply-option {
+  display: block;
+}
+.reply-option {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.reply-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+.reply-container.active {
+  display: block;
+}
+.reply-container textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 40px;
+  max-height: 100px;
+  resize: vertical;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.reply-container button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.replies {
+  margin-top: 10px;
+}
+.reply {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.reply-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.reply-content {
+  margin-bottom: 5px;
+}
+.load-more-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  display: none; /* Initially hide the load more button */
+}
+
+/* Additional styles for profile picture */
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Additional styles for post headers */
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.avatar-container {
+  margin-right: 10px;
+}
+
+.info-container {
+  flex: 1;
+}
+
+.email {
+  font-weight: bold;
+}
+
+.timestamp {
+  color: #666;
+  font-size: 14px;
+}
